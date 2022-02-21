@@ -4,11 +4,11 @@ import random
 import time
 
 def test_create():
-    savings = account.Account()
+    savings = account.Account(100)
     assert savings.get_balance() == 0
 
 def test_deposit():
-    savings = account.Account()
+    savings = account.Account(100)
 
     random.seed(int(time.time()))
     add = round(random.uniform(20.0, 100.0), 2)
@@ -16,7 +16,7 @@ def test_deposit():
     assert savings.deposit(add) == add
 
 def test_withdrawl():
-    savings = account.Account()
+    savings = account.Account(100)
 
     random.seed(int(time.time()))
     add = round(random.uniform(20.0, 100.0), 2)
@@ -28,7 +28,7 @@ def test_withdrawl():
     assert savings.withdrawl(remove) == final
 
 def test_overdraft():
-    savings = account.Account()
+    savings = account.Account(100)
 
     random.seed(int(time.time()))
     add = round(random.uniform(20.0, 100.0), 2)

@@ -1,9 +1,6 @@
-from distutils.log import error
-
-
 class Account():
-    def __init__(self):
-        self.__id = 0
+    def __init__(self, id):
+        self.__id = id
         self.__balance = 0
 
     def __overdraft(self, amount):
@@ -11,9 +8,6 @@ class Account():
             return True
         else:
             return False
-
-    def interest(self, rate):
-        self.__balance += self.__balance*rate
 
     def get_id(self):
         return self.__id
@@ -37,3 +31,6 @@ class Account():
         self.__balance -= amount
         account.__balance += amount
         return self.__balance
+
+    def interest(self, rate):
+        self.__balance += self.__balance*rate

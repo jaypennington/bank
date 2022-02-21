@@ -8,7 +8,7 @@ $(VENV)/bin/activate: requirements.txt
 	$(PIP) install -r requirements.txt
 
 test: $(VENV)/bin/activate
-	$(PYTEST) test/*
+	$(PYTEST) test/test_*
 
 clean:
 	rm -rf .pytest_cache/
