@@ -1,0 +1,14 @@
+# Note: these people are all fake
+- client1:
+    name: "John Smith"
+    street: "123 Main Street"
+    city: "Spavinaw"
+    state: "OK"
+    zip: 34567
+- client2:
+    name: "Sarah Flanders"
+    street: "488 8th Street"
+    city: "Bangor"
+    state: "ME"
+    zip: 23432
+    
